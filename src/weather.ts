@@ -4,6 +4,13 @@ async function getWeather(): Promise<void> {
             "https://api.open-meteo.com/v1/forecast?latitude=60.45451&longitude=22.264824&current=temperature_2m,relative_humidity_2m,cloud_cover,surface_pressure,wind_speed_10m&timezone=auto";
 
         const response: Response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(
+                `HTTP Error: ${response.status} - ${response.statusText}`
+            );
+        }
+
         const data: any = await response.json();
 
         if (!data || !data.current) {
@@ -11,13 +18,20 @@ async function getWeather(): Promise<void> {
         }
 
         // Extract current weather data
-        const current = data.current;
+        const {
+            temperature_2m,
+            relative_humidity_2m,
+            cloud_cover,
+            surface_pressure,
+            wind_speed_10m,
+        } = data.current;
+
         const weatherData = {
-            temperature2m: current.temperature_2m ?? "N/A",
-            relativeHumidity2m: current.relative_humidity_2m ?? "N/A",
-            cloudCover: current.cloud_cover ?? "N/A",
-            surfacePressure: current.surface_pressure ?? "N/A",
-            windSpeed10m: current.wind_speed_10m ?? "N/A",
+            temperature2m: temperature_2m ?? "N/A",
+            relativeHumidity2m: relative_humidity_2m ?? "N/A",
+            cloudCover: cloud_cover ?? "N/A",
+            surfacePressure: surface_pressure ?? "N/A",
+            windSpeed10m: wind_speed_10m ?? "N/A",
         };
 
         // Function to safely update an element
@@ -44,8 +58,8 @@ async function getWeather(): Promise<void> {
             "windSpeed",
             `Wind Speed: ${weatherData.windSpeed10m} m/s`
         );
-    } catch (error) {
-        console.error("Error fetching weather data:", error);
+    } catch (error: any) {
+        console.error("Error fetching weather data:", error.message);
     }
 }
 
