@@ -10,22 +10,24 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 function getWeather() {
     return __awaiter(this, void 0, void 0, function* () {
-        var _a, _b, _c, _d, _e;
         try {
             const url = "https://api.open-meteo.com/v1/forecast?latitude=60.45451&longitude=22.264824&current=temperature_2m,relative_humidity_2m,cloud_cover,surface_pressure,wind_speed_10m&timezone=auto";
             const response = yield fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP Error: ${response.status} - ${response.statusText}`);
+            }
             const data = yield response.json();
             if (!data || !data.current) {
                 throw new Error("No weather data available.");
             }
             // Extract current weather data
-            const current = data.current;
+            const { temperature_2m, relative_humidity_2m, cloud_cover, surface_pressure, wind_speed_10m, } = data.current;
             const weatherData = {
-                temperature2m: (_a = current.temperature_2m) !== null && _a !== void 0 ? _a : "N/A",
-                relativeHumidity2m: (_b = current.relative_humidity_2m) !== null && _b !== void 0 ? _b : "N/A",
-                cloudCover: (_c = current.cloud_cover) !== null && _c !== void 0 ? _c : "N/A",
-                surfacePressure: (_d = current.surface_pressure) !== null && _d !== void 0 ? _d : "N/A",
-                windSpeed10m: (_e = current.wind_speed_10m) !== null && _e !== void 0 ? _e : "N/A",
+                temperature2m: temperature_2m !== null && temperature_2m !== void 0 ? temperature_2m : "N/A",
+                relativeHumidity2m: relative_humidity_2m !== null && relative_humidity_2m !== void 0 ? relative_humidity_2m : "N/A",
+                cloudCover: cloud_cover !== null && cloud_cover !== void 0 ? cloud_cover : "N/A",
+                surfacePressure: surface_pressure !== null && surface_pressure !== void 0 ? surface_pressure : "N/A",
+                windSpeed10m: wind_speed_10m !== null && wind_speed_10m !== void 0 ? wind_speed_10m : "N/A",
             };
             // Function to safely update an element
             const updateElement = (id, text) => {
@@ -41,7 +43,7 @@ function getWeather() {
             updateElement("windSpeed", `Wind Speed: ${weatherData.windSpeed10m} m/s`);
         }
         catch (error) {
-            console.error("Error fetching weather data:", error);
+            console.error("Error fetching weather data:", error.message);
         }
     });
 }
