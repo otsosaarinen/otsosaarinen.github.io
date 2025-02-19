@@ -16,8 +16,6 @@ body {
     flex-direction: column;
     gap: 1vw;
     background-color: var(--black);
-    background-image: url("/img/tokyo.jpg");
-    background-size: cover;
 }
 
 .black-to-blue-animation {
