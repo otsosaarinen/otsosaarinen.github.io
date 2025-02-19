@@ -10,12 +10,22 @@ body {
     margin: 0px;
     font-family: "Poppins";
     min-height: 100vh;
+    background-color: var(--black);
+    background-image: url("/img/tokyo.jpg");
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.page-content {
+    background-color: rgba(0, 0, 0, 0.75);
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    gap: 1vw;
-    background-color: var(--black);
+    align-items: center;
+    gap: 2vw;
 }
 
 .black-to-blue-animation {
@@ -47,13 +57,12 @@ body {
 .text-container {
     margin: 0px;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .main-text {
     margin: 0px;
-    text-align: center;
     font-size: 4.5vw;
     width: 100%;
     white-space: nowrap;
@@ -84,13 +93,13 @@ body {
 }
 
 .button {
-    color: var(--white);
-    background-color: var(--black);
-    border: 0.2vw solid var(--green);
     margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--white);
+    background-color: var(--black);
+    border: 0.2vw solid var(--green);
     font-size: 1vw;
     width: 6vw;
     height: 2vw;
@@ -120,6 +129,7 @@ body {
 }
 
 .popup {
+    margin: 0px;
     position: fixed;
     top: 10%;
     left: -5%;
