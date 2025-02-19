@@ -25,15 +25,16 @@ function copyToClipboard(text) {
     window.open("https://www.linkedin.com/in/otso-saarinen/");
 });
 // Changes the background color of the website
-(_d = document.getElementById("color-button")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", function () {
-    if (document.body.classList.contains("black-to-blue-animation")) {
-        document.body.classList.remove("black-to-blue-animation");
+(_d = document
+    .getElementById("background-button")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", function () {
+    if (document.body.classList.contains("background-animation-1")) {
+        document.body.classList.remove("background-animation-1");
         void document.body.offsetWidth;
-        document.body.classList.add("blue-to-black-animation");
+        document.body.classList.add("background-animation-2");
     }
     else {
-        document.body.classList.remove("blue-to-black-animation");
+        document.body.classList.remove("background-animation-2");
         void document.body.offsetWidth;
-        document.body.classList.add("black-to-blue-animation");
+        document.body.classList.add("background-animation-1");
     }
 });
