@@ -1,8 +1,8 @@
 :root {
     --white: #ffffff;
     --green: #adff9b;
+    --light-blue: #9bf7ff;
     --black: #2e2e2e;
-    --grey: #6a6a6a;
     --blue: #6ba5ff;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 .page-content {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.8);
     min-width: 100vw;
     display: flex;
     justify-content: center;
@@ -106,8 +106,7 @@ body {
     transition: all 0.3s;
 }
 
-.button:hover,
-.color-button:hover {
+.button:hover {
     transform: translateY(-0.25vw);
     background-color: var(--green);
     color: var(--black);
@@ -121,11 +120,18 @@ body {
     align-items: center;
     color: var(--white);
     background-color: var(--black);
-    border: 0.2vw solid var(--green);
+    border: 0.2vw solid var(--light-blue);
     width: 22.6vw;
     height: 2vw;
     font-size: 1vw;
     transition: all 0.3s;
+}
+
+.color-button:hover {
+    transform: translateY(-0.25vw);
+    background-color: var(--light-blue);
+    color: var(--black);
+    cursor: pointer;
 }
 
 .popup {
@@ -138,7 +144,7 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--white);
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 2vw;
     font-size: 1vw;
     min-width: 8vw;
@@ -180,7 +186,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--black);
-    border: 0.2vw solid var(--green);
+    border: 0.2vw solid var(--light-blue);
     color: var(--white);
     font-size: 1vw;
     width: 22.6vw;
