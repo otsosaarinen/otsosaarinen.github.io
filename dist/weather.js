@@ -10,9 +10,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 function getWeather() {
     return __awaiter(this, void 0, void 0, function* () {
-        var _a, _b, _c, _d, _e, _f, _g;
+        var _a, _b, _c, _d, _e;
         try {
-            const url = "https://api.open-meteo.com/v1/forecast?latitude=60.45451&longitude=22.264824&current=temperature_2m,relative_humidity_2m,is_day,weather_code,cloud_cover,surface_pressure,wind_speed_10m&timezone=auto";
+            const url = "https://api.open-meteo.com/v1/forecast?latitude=60.45451&longitude=22.264824&current=temperature_2m,relative_humidity_2m,cloud_cover,surface_pressure,wind_speed_10m&timezone=auto";
             const response = yield fetch(url);
             const data = yield response.json();
             if (!data || !data.current) {
@@ -23,11 +23,9 @@ function getWeather() {
             const weatherData = {
                 temperature2m: (_a = current.temperature_2m) !== null && _a !== void 0 ? _a : "N/A",
                 relativeHumidity2m: (_b = current.relative_humidity_2m) !== null && _b !== void 0 ? _b : "N/A",
-                isDay: (_c = current.is_day) !== null && _c !== void 0 ? _c : "N/A",
-                weatherCode: (_d = current.weather_code) !== null && _d !== void 0 ? _d : "N/A",
-                cloudCover: (_e = current.cloud_cover) !== null && _e !== void 0 ? _e : "N/A",
-                surfacePressure: (_f = current.surface_pressure) !== null && _f !== void 0 ? _f : "N/A",
-                windSpeed10m: (_g = current.wind_speed_10m) !== null && _g !== void 0 ? _g : "N/A",
+                cloudCover: (_c = current.cloud_cover) !== null && _c !== void 0 ? _c : "N/A",
+                surfacePressure: (_d = current.surface_pressure) !== null && _d !== void 0 ? _d : "N/A",
+                windSpeed10m: (_e = current.wind_speed_10m) !== null && _e !== void 0 ? _e : "N/A",
             };
             // Function to safely update an element
             const updateElement = (id, text) => {
@@ -38,6 +36,7 @@ function getWeather() {
             // Update HTML elements with weather data
             updateElement("temperature", `Temperature: ${weatherData.temperature2m}°C`);
             updateElement("relativeHumidity", `Humidity: ${weatherData.relativeHumidity2m}%`);
+            updateElement("cloudCover", `Cloud cover: ${weatherData.cloudCover}%`);
             updateElement("surfacePressure", `Pressure: ${weatherData.surfacePressure} hPa`);
             updateElement("windSpeed", `Wind Speed: ${weatherData.windSpeed10m} m/s`);
         }
