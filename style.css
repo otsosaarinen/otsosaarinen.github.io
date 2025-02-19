@@ -3,6 +3,7 @@
     --green: #adff9b;
     --black: #2e2e2e;
     --grey: #6a6a6a;
+    --blue: #6ba5ff;
 }
 
 body {
@@ -23,10 +24,10 @@ body {
 
 @keyframes black-to-blue {
     from {
-        background-color: #404040;
+        background-color: var(--black);
     }
     to {
-        background-color: #6ba5ff;
+        background-color: var(--blue);
     }
 }
 
@@ -36,10 +37,10 @@ body {
 
 @keyframes blue-to-black {
     from {
-        background-color: #6ba5ff;
+        background-color: var(--blue);
     }
     to {
-        background-color: #404040;
+        background-color: var(--black);
     }
 }
 
