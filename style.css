@@ -11,7 +11,7 @@ body {
     font-family: "Poppins";
     min-height: 100vh;
     background-color: var(--black);
-    background-image: url("/img/tokyo.jpg");
+    background-image: url("/img/tokyo_view.jpg");
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -28,29 +28,29 @@ body {
     gap: 2vw;
 }
 
-.black-to-blue-animation {
-    animation: black-to-blue 0.5s forwards;
+.background-animation-1 {
+    animation: background-animation-1 0.5s forwards;
 }
 
-@keyframes black-to-blue {
+@keyframes background-animation-1 {
     from {
-        background-color: var(--black);
+        background-image: url("/img/tokyo.jpg");
     }
     to {
-        background-color: var(--blue);
+        background-image: url("/img/tokyo_view.jpg");
     }
 }
 
-.blue-to-black-animation {
-    animation: blue-to-black 0.5s forwards;
+.background-animation-2 {
+    animation: background-animation-2 0.5s forwards;
 }
 
-@keyframes blue-to-black {
+@keyframes background-animation-2 {
     from {
-        background-color: var(--blue);
+        background-image: url("/img/tokyo_view.jpg");
     }
     to {
-        background-color: var(--black);
+        background-image: url("/img/tokyo.jpg");
     }
 }
 
@@ -113,7 +113,7 @@ body {
     cursor: pointer;
 }
 
-.color-button {
+.background-button {
     margin: 0px;
     display: flex;
     justify-content: center;
@@ -127,7 +127,7 @@ body {
     transition: all 0.3s;
 }
 
-.color-button:hover {
+.background-button:hover {
     transform: translateY(-0.25vw);
     background-color: var(--light-blue);
     color: var(--black);
