@@ -138,7 +138,7 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--white);
-    background-color: var(--grey);
+    background-color: rgba(0, 0, 0, 0.75);
     border-radius: 2vw;
     font-size: 1vw;
     min-width: 8vw;
