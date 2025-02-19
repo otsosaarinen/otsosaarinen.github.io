@@ -20,7 +20,6 @@ function getWeather() {
             if (!data || !data.current) {
                 throw new Error("No weather data available.");
             }
-            // Extract current weather data
             const { temperature_2m, relative_humidity_2m, cloud_cover, surface_pressure, wind_speed_10m, } = data.current;
             const weatherData = {
                 temperature2m: temperature_2m !== null && temperature_2m !== void 0 ? temperature_2m : "N/A",
@@ -29,13 +28,11 @@ function getWeather() {
                 surfacePressure: surface_pressure !== null && surface_pressure !== void 0 ? surface_pressure : "N/A",
                 windSpeed10m: wind_speed_10m !== null && wind_speed_10m !== void 0 ? wind_speed_10m : "N/A",
             };
-            // Function to safely update an element
             const updateElement = (id, text) => {
                 const element = document.getElementById(id);
                 if (element)
                     element.textContent = text;
             };
-            // Update HTML elements with weather data
             updateElement("temperature", `Temperature: ${weatherData.temperature2m}°C`);
             updateElement("relativeHumidity", `Humidity: ${weatherData.relativeHumidity2m}%`);
             updateElement("cloudCover", `Cloud cover: ${weatherData.cloudCover}%`);
@@ -47,5 +44,4 @@ function getWeather() {
         }
     });
 }
-// Run when the page loads
 document.addEventListener("DOMContentLoaded", getWeather);
