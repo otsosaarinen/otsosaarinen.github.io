@@ -67,8 +67,8 @@ body {
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 2s;
     color: var(--green);
+    animation: typing 2s;
 }
 
 @keyframes typing {
