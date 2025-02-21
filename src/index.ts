@@ -29,6 +29,13 @@ document
         window.open("https://www.linkedin.com/in/otso-saarinen/");
     });
 
+// Preload images
+const images = ["/img/tokyo.jpg", "/img/tokyo_view.jpg"];
+images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+});
+
 // Changes the background color of the website
 document
     .getElementById("background-button")
