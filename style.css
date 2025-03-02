@@ -23,7 +23,6 @@ body {
     position: absolute;
     height: 100dvh;
     width: 100%;
-    z-index: -1;
 }
 
 .page-container {
@@ -40,4 +39,5 @@ body {
     margin: 0;
     padding: 0;
     font-size: 125px;
+    z-index: 1;
 }
