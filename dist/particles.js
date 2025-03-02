@@ -1,4 +1,3 @@
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load("particles-js", "../particles.json", function () {
-    console.log("particles.js loaded succesfully");
+particlesJS.load("particles-js", "../particles.json", () => {
+    console.log("particles.js loaded successfully");
 });
