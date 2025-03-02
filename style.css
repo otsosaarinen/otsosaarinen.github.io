@@ -1,8 +1,22 @@
 :root {
+    --black: #181818;
     --white: #ffffff;
-    --green: #adff9b;
-    --light-blue: #9bf7ff;
-    --black: #2e2e2e;
-    --blue: #6ba5ff;
+    --light-blue: #8ab7ff;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: var(--black);
+}
+
+#particles-js {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 100dvh;
+    width: 100%;
+}
