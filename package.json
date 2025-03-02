@@ -1,23 +1,24 @@
 {
     "name": "otsosaarinen.github.io",
     "version": "1.0.0",
-    "description": "",
-    "homepage": "https://github.com/otsosaarinen/otsosaarinen.github.io#readme",
-    "bugs": {
-        "url": "https://github.com/otsosaarinen/otsosaarinen.github.io/issues"
+    "description": "![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)\r ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)\r ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)\r ### Portfolio website for myself built with TypeScript",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/otsosaarinen/otsosaarinen.github.io.git"
     },
-    "license": "ISC",
+    "keywords": [],
     "author": "",
-    "type": "commonjs",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+    "license": "ISC",
+    "type": "module",
+    "bugs": {
+        "url": "https://github.com/otsosaarinen/otsosaarinen.github.io/issues"
     },
+    "homepage": "https://github.com/otsosaarinen/otsosaarinen.github.io#readme",
     "devDependencies": {
-        "typescript": "^5.7.3"
+        "typescript": "^5.8.2"
     }
 }
