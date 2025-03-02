@@ -20,5 +20,8 @@
     "homepage": "https://github.com/otsosaarinen/otsosaarinen.github.io#readme",
     "devDependencies": {
         "typescript": "^5.8.2"
+    },
+    "dependencies": {
+        "particles.js": "^2.0.0"
     }
 }
