@@ -1,10 +1,10 @@
 {
     "particles": {
         "number": {
-            "value": 50,
+            "value": 90,
             "density": {
                 "enable": true,
-                "value_area": 800
+                "value_area": 1400
             }
         },
         "color": {
@@ -54,7 +54,7 @@
         },
         "move": {
             "enable": true,
-            "speed": 1.5,
+            "speed": 2,
             "direction": "none",
             "random": false,
             "straight": false,
