@@ -1,198 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
+    --black: #181818;
     --white: #ffffff;
-    --green: #adff9b;
-    --light-blue: #9bf7ff;
-    --black: #2e2e2e;
-    --blue: #6ba5ff;
+    --light-blue: #8ab7ff;
 }
 
 body {
-    margin: 0px;
-    font-family: "Poppins";
-    min-height: 100vh;
-    background-color: var(--black);
-    background-image: url("/img/tokyo.jpg");
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.page-content {
-    background-color: rgba(0, 0, 0, 0.8);
-    min-width: 100vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 2vw;
-}
-
-.background-animation-1 {
-    animation: background-animation-1 0.5s forwards;
-}
-
-@keyframes background-animation-1 {
-    from {
-        background-image: url("/img/tokyo.jpg");
-    }
-    to {
-        background-image: url("/img/tokyo_view.jpg");
-    }
-}
-
-.background-animation-2 {
-    animation: background-animation-2 0.5s forwards;
-}
-
-@keyframes background-animation-2 {
-    from {
-        background-image: url("/img/tokyo_view.jpg");
-    }
-    to {
-        background-image: url("/img/tokyo.jpg");
-    }
-}
-
-.text-container {
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main-text {
-    margin: 0px;
-    font-size: 4.5vw;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    white-space: nowrap;
+    height: 100dvh;
+    font-family: "Poppins";
+    color: var(--white);
     overflow: hidden;
-    color: var(--green);
-    animation: typing 2s;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-.secondary-text {
-    margin: 0px;
-    font-size: 1vw;
-    color: var(--white);
-}
-
-.button-container {
-    margin: 0px;
-    display: flex;
-    gap: 2vw;
-}
-
-.button {
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white);
     background-color: var(--black);
-    border: 0.2vw solid var(--green);
-    font-size: 1vw;
-    width: 6vw;
-    height: 2vw;
-    transition: all 0.3s;
 }
 
-.button:hover {
-    transform: translateY(-0.25vw);
-    background-color: var(--green);
-    color: var(--black);
-    cursor: pointer;
+#particles-js {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 100dvh;
+    width: 100%;
 }
 
-.background-button {
-    margin: 0px;
+.page-container {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--white);
-    background-color: var(--black);
-    border: 0.2vw solid var(--light-blue);
-    width: 22.6vw;
-    height: 2vw;
-    font-size: 1vw;
-    transition: all 0.3s;
-}
-
-.background-button:hover {
-    transform: translateY(-0.25vw);
-    background-color: var(--light-blue);
-    color: var(--black);
-    cursor: pointer;
-}
-
-.popup {
-    margin: 0px;
-    position: fixed;
-    top: 10%;
-    left: -5%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white);
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 2vw;
-    font-size: 1vw;
-    min-width: 8vw;
-    padding: 0.5vw;
-}
-
-.popup-animation {
-    animation: popup 2.5s ease-in-out;
-}
-
-@keyframes popup {
-    0% {
-        left: -5%;
-    }
-    20% {
-        left: 50%;
-    }
-    80% {
-        left: 50%;
-    }
-    100% {
-        left: 105%;
-    }
-}
-
-.weather-box {
-    margin: 0px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    color: var(--white);
-    font-size: 1vw;
+    gap: clamp(15px, 2dvw, 50px);
+    height: 100dvh;
+    width: 100%;
 }
 
-.weather-container {
-    margin: 0px;
+.name {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(2rem, 8dvw, 10rem);
+    font-weight: 800;
+    line-height: 80%;
+    z-index: 1;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(1rem, 2dvw, 4rem);
+    font-weight: 500;
+    z-index: 1;
+    line-height: 80%;
+}
+
+.links {
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--black);
-    border: 0.2vw solid var(--light-blue);
-    color: var(--white);
-    font-size: 1vw;
-    width: 22.6vw;
-    height: 8vw;
+    z-index: 1;
 }
 
-.weather-container p {
-    margin: 0px;
+.links img {
+    margin: 0 10px;
+    padding: 0;
+    width: clamp(40px, 3dvw, 80px);
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    z-index: 1;
+    transition: transform 0.2s ease-in-out;
+}
+
+.links img:hover {
+    transform: scale(1.2);
 }
