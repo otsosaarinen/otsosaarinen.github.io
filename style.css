@@ -32,7 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1dvw;
+    gap: clamp(15px, 2dvw, 50px);
     height: 100dvh;
     width: 100%;
 }
@@ -49,7 +49,7 @@ body {
 .title {
     margin: 0;
     padding: 0;
-    font-size: clamp(1rem, 2dvw, 5rem);
+    font-size: clamp(1rem, 2dvw, 4rem);
     font-weight: 500;
     z-index: 1;
     line-height: 80%;
@@ -67,8 +67,8 @@ body {
 .links img {
     margin: 0 10px;
     padding: 0;
-    width: 40px;
-    height: 40px;
+    width: clamp(40px, 3dvw, 80px);
+    height: auto;
     object-fit: contain;
     filter: brightness(0) invert(1);
     z-index: 1;
