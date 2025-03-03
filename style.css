@@ -31,6 +31,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100dvh;
     width: 100%;
 }
@@ -38,6 +39,21 @@ body {
 .name {
     margin: 0;
     padding: 0;
-    font-size: 125px;
+    font-size: clamp(2rem, 8dvw, 10rem);
+    font-weight: 600;
+    z-index: 1;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(1rem, 4dvw, 5rem);
+    font-weight: 500;
+    z-index: 1;
+}
+
+.links {
+    margin: 0;
+    padding: 0;
     z-index: 1;
 }
