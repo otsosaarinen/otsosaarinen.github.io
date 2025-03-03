@@ -61,12 +61,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0px;
     z-index: 1;
 }
 
 .links img {
     margin: 0 10px;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: clamp(40px, 3dvw, 80px);
     height: auto;
     object-fit: contain;
@@ -77,4 +81,26 @@ body {
 
 .links img:hover {
     transform: scale(1.2);
+    cursor: pointer;
+}
+
+.language-switch {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-blue);
+    border-radius: 35px;
+    font-size: clamp(1rem, 1.5dvw, 2.5rem);
+    font-weight: 500;
+    height: auto;
+    width: auto;
+    z-index: 1;
+    transition: transform 0.2s ease-in-out;
+}
+
+.language-switch:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
