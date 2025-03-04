@@ -6,5 +6,5 @@ const skillsButton = document.getElementById("skills-button");
 const skillsList = document.getElementById("skills");
 
 skillsButton.addEventListener("click", () => {
-    skillsList.scrollIntoView();
+    skillsList.scrollIntoView({ behavior: "smooth", block: "center" });
 });
