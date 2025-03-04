@@ -81,7 +81,7 @@ body {
 }
 
 .links img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -98,12 +98,14 @@ body {
     height: auto;
     width: auto;
     z-index: 1;
-    transition: transform 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .skills-button:hover {
     transform: scale(1.1);
     cursor: pointer;
+    background-color: var(--white);
+    color: var(--light-blue);
 }
 
 .skills-container {
