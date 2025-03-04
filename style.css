@@ -120,3 +120,15 @@ body {
     font-size: clamp(1rem, 1.5dvw, 2.5rem);
     z-index: 1;
 }
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.skills img {
+    width: clamp(40px, 3dvw, 80px);
+    z-index: 1;
+}
