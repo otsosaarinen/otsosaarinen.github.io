@@ -122,13 +122,50 @@ body {
 }
 
 .skills {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     z-index: 1;
 }
 
-.skills img {
-    width: clamp(40px, 3dvw, 80px);
+.skills p {
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-blue);
+    color: var(--black);
+    border-radius: 30px;
+    padding: 0 15px;
+}
+
+.skill-text-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(375px, 60dvw, 1300px);
+    height: auto;
+}
+
+.back-button {
+    margin: 0;
+    padding: 10px;
+    background-color: var(--light-blue);
+    font-size: clamp(1rem, 1.5dvw, 2.5rem);
+    font-weight: 500;
+    line-height: 80%;
+    height: auto;
+    width: auto;
     z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--light-blue);
 }
