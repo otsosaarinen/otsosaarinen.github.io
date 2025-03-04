@@ -2,9 +2,9 @@ document.getElementById("email").addEventListener("click", () => {
     navigator.clipboard.writeText("saarinenotso@gmail.com");
 });
 
-const skillsButton = document.getElementById("skills-button");
-const skillsList = document.getElementById("skills");
+const skillButton = document.getElementById("skills-button");
+const skillList = document.getElementById("skills-container");
 
-skillsButton.addEventListener("click", () => {
-    skillsList.scrollIntoView({ behavior: "smooth", block: "center" });
+skillButton.addEventListener("click", () => {
+    skillList.scrollIntoView({ behavior: "smooth", block: "center" });
 });
