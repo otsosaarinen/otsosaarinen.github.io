@@ -15,7 +15,6 @@ body {
     padding: 0;
     width: 100%;
     min-height: 100dvh;
-    overflow-y: auto;
     font-family: "Poppins";
     color: var(--white);
     background-color: var(--black);
