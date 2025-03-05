@@ -62,12 +62,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5dvw;
+    gap: 1dvw;
     z-index: 1;
 }
 
 .links img {
-    margin: 0 10px;
     padding: 0;
     display: flex;
     justify-content: center;
