@@ -88,6 +88,13 @@ body {
     cursor: pointer;
 }
 
+.skills-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1dvw;
+}
+
 .skills-button {
     margin: 0;
     padding: 10px;
@@ -99,7 +106,7 @@ body {
     font-weight: 500;
     line-height: 80%;
     height: auto;
-    width: auto;
+    width: clamp(80px, 8dvw, 225px);
     z-index: 1;
     transition: all 0.2s ease-in-out;
 }
@@ -134,31 +141,23 @@ body {
 
 .skills {
     margin: 0;
-    padding: 0;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3dvw;
     flex-wrap: wrap;
+    background-color: green;
     z-index: 1;
 }
 
-.skills p {
-    margin: 0;
-    padding: 0;
-    background-color: var(--light-blue);
-    color: var(--black);
-    border-radius: 30px;
-    padding: 0 15px;
-}
-
-.skill-text-container {
-    margin: 0;
-    padding: 0;
+.skills .frontend,
+.skills .backend,
+.skills .other {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: clamp(375px, 60dvw, 1300px);
-    height: auto;
 }
 
 .back-button {
