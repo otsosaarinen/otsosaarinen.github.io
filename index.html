@@ -16,46 +16,80 @@
         <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <script src="./js/particles.js"></script>
 
-        <div class="page-container" id="page-container">
-            <div class="name">OTSO SAARINEN</div>
-            <div class="title">ict engineering student</div>
+        <div class="up-down-container">
+            <div class="arrow-up">
+                <img src="./assets/arrow.png" alt="arrow up" id="arrow-up" />
+            </div>
+            <div class="arrow-down">
+                <img
+                    src="./assets/arrow.png"
+                    alt="arrow down"
+                    id="arrow-down"
+                />
+            </div>
+        </div>
+
+        <div class="page-container">
+            <div class="main-title">OTSO SAARINEN</div>
+            <div class="secondary-title">ICT engineering student</div>
             <div class="links">
-                <a href="https://github.com/otsosaarinen" target="_blank"
+                <a
+                    href="https://github.com/otsosaarinen"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     ><img src="./assets/github.png" alt="GitHub"
                 /></a>
                 <a
                     href="https://www.linkedin.com/in/otso-saarinen/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     ><img src="./assets/linkedin.png" alt="LinkedIn"
                 /></a>
-                <a id="email"><img src="./assets/email.png" alt="Email" /></a>
-            </div>
-            <div class="skills-button-container" id="skills-button-container">
-                <div class="skills-button" id="skills-button">MY SKILLS</div>
+                <a href="mailto:saarinenotso@gmail.com" alt="Email"
+                    ><img src="./assets/email.png" alt="Email" id="email"
+                /></a>
             </div>
         </div>
-        <div class="skills-container" id="skills-container">
+
+        <div class="skills-container">
             <div class="skills-title">My Expertise</div>
-            <div class="skills">
+            <div class="skills-box">
                 <div class="frontend">
-                    <p>TypeScript</p>
-                    <p>JavaScript</p>
-                    <p>React</p>
-                    <p>Tailwind CSS</p>
+                    <div class="frontend-title">Frontend</div>
+                    <div class="frontend-skills">
+                        <p>TypeScript</p>
+                        <p>JavaScript</p>
+                        <p>React</p>
+                        <p>Tailwind</p>
+                    </div>
                 </div>
+
                 <div class="backend">
-                    <p>Node.js</p>
-                    <p>Python</p>
+                    <div class="backend-title">Backend</div>
+                    <div class="backend-skills">
+                        <p>Node.js</p>
+                        <p>Express.js</p>
+                        <p>Python</p>
+                    </div>
                 </div>
+
                 <div class="other">
-                    <p>Azure</p>
-                    <p>GenAI</p>
-                    <p>sqlite3</p>
-                    <p>Apache Kafka</p>
+                    <div class="other-title">Other</div>
+                    <div class="other-skills">
+                        <p>Azure</p>
+                        <p>GenAI</p>
+                        <p>Apache Kafka</p>
+                        <p>SQLite3</p>
+                        <p>Git</p>
+                    </div>
                 </div>
             </div>
-            <div class="back-button" id="back-button">BACK TO TOP</div>
         </div>
+
+        <div class="weather-container">
+            <div class="constructing">Under construction.</div>
+        </div>
+
         <script src="./js/script.js"></script>
     </body>
 </html>

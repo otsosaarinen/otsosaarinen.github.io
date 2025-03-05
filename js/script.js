@@ -1,19 +1,18 @@
-document.getElementById("email").addEventListener("click", () => {
-    navigator.clipboard.writeText("saarinenotso@gmail.com");
+// Scrolling functions
+
+const arrowUp = document.getElementById("arrow-up");
+const arrowDown = document.getElementById("arrow-down");
+
+arrowUp.addEventListener("click", function () {
+    window.scrollBy({
+        top: -window.innerHeight,
+        behavior: "smooth",
+    });
 });
 
-const skillButton = document.getElementById("skills-button");
-const skillList = document.getElementById("skills-container");
-
-// Scroll to skills
-skillButton.addEventListener("click", () => {
-    skillList.scrollIntoView({ behavior: "smooth", block: "center" });
-});
-
-// Scroll back up
-const backButton = document.getElementById("back-button");
-const pageContainer = document.getElementById("page-container");
-
-backButton.addEventListener("click", () => {
-    pageContainer.scrollIntoView({ behavior: "smooth", block: "center" });
+arrowDown.addEventListener("click", function () {
+    window.scrollBy({
+        top: window.innerHeight,
+        behavior: "smooth",
+    });
 });
