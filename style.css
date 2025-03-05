@@ -40,7 +40,8 @@ body {
 
 .name {
     margin: 0;
-    padding: 0;
+    padding: 15px;
+    background-color: var(--light-blue);
     font-size: clamp(2rem, 8dvw, 10rem);
     font-weight: 800;
     line-height: 80%;
