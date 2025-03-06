@@ -4,6 +4,7 @@
     --black: #181818;
     --white: #ffffff;
     --light-blue: #8ab7ff;
+    --dark-blue: #5496ff;
 }
 
 html {
@@ -55,7 +56,7 @@ body {
 .arrow-down {
     margin: 0;
     padding: 0;
-    transition: transform 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     background-color: var(--light-blue);
     z-index: 1;
 }
@@ -63,11 +64,13 @@ body {
 .arrow-up:hover {
     cursor: pointer;
     transform: rotate(90deg) scale(1.1);
+    background-color: var(--dark-blue);
 }
 
 .arrow-down:hover {
     cursor: pointer;
     transform: rotate(-90deg) scale(1.1);
+    background-color: var(--dark-blue);
 }
 
 .up-down-container img {
@@ -148,7 +151,7 @@ body {
     flex-direction: column;
     height: 100dvh;
     width: 100%;
-    gap: 1.5dvw;
+    gap: 1dvw;
     z-index: 1;
 }
 
@@ -167,13 +170,15 @@ body {
     justify-content: center;
     align-items: start;
     flex-direction: row;
-    gap: 4dvw;
+    padding: 10px;
+    gap: 3dvw;
     z-index: 1;
 }
 
 .frontend-title,
 .backend-title,
-.other-title {
+.database-cloud-title,
+.misc-title {
     margin: 0;
     padding: 0;
     display: flex;
@@ -186,7 +191,8 @@ body {
 
 .frontend-skills,
 .backend-skills,
-.other-skills {
+.database-cloud-skills,
+.misc-skills {
     margin: 0;
     padding: 0;
     display: flex;
@@ -194,19 +200,32 @@ body {
     align-items: center;
     flex-direction: column;
     font-size: 1dvw;
+    gap: 5px;
     z-index: 1;
 }
 
 .frontend-skills p,
 .backend-skills p,
-.other-skills p {
+.database-cloud-skills p,
+.misc-skills p {
     margin: 0;
-    padding: 0;
+    padding: 3px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: var(--light-blue);
+    color: var(--black);
+    transition: background-color 0.1s ease-in-out;
+    min-width: 175px;
     z-index: 1;
+}
+
+.frontend-skills p:hover,
+.backend-skills p:hover,
+.database-cloud-skills p:hover,
+.misc-skills p:hover {
+    background-color: var(--dark-blue);
 }
 
 .weather-container {
