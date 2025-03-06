@@ -80,7 +80,7 @@ body {
     justify-content: center;
     align-items: center;
     height: auto;
-    width: 3dvw;
+    width: clamp(30px, 3dvw, 90px);
     z-index: 1;
 }
 
@@ -91,7 +91,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2dvw;
+    gap: clamp(20px, 2dvw, 40px);
     height: 100dvh;
     width: 100%;
     z-index: 1;
@@ -100,7 +100,7 @@ body {
 .main-title {
     margin: 0;
     padding: 0;
-    font-size: 8dvw;
+    font-size: clamp(40px, 8dvw, 225px);
     font-weight: 800;
     line-height: 80%;
     z-index: 1;
@@ -109,7 +109,7 @@ body {
 .secondary-title {
     margin: 0;
     padding: 0;
-    font-size: 2dvw;
+    font-size: clamp(20px, 2dvw, 55px);
     font-weight: 500;
     font-style: italic;
     text-decoration: underline var(--light-blue);
@@ -123,14 +123,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1dvw;
+    gap: clamp(10px, 1dvw, 25px);
 }
 
 .links img {
     margin: 0;
     padding: 0;
     filter: brightness(0) invert(1);
-    width: 3dvw;
+    width: clamp(30px, 3dvw, 80px);
     height: auto;
     object-fit: contain;
     z-index: 1;
@@ -158,7 +158,7 @@ body {
 .skills-title {
     margin: 0;
     padding: 0;
-    font-size: 2dvw;
+    font-size: clamp(20px, 2dvw, 55px);
     font-weight: 500;
     z-index: 1;
 }
@@ -170,8 +170,7 @@ body {
     justify-content: center;
     align-items: start;
     flex-direction: row;
-    padding: 10px;
-    gap: 3dvw;
+    gap: clamp(10px, 3dvw, 80px);
     z-index: 1;
 }
 
@@ -184,7 +183,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5dvw;
+    font-size: clamp(15px, 1.5dvw, 45px);
     text-decoration: underline var(--light-blue);
     text-underline-offset: 0.2dvw;
 }
@@ -199,8 +198,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 1dvw;
-    gap: 5px;
+    font-size: clamp(10px, 1dvw, 30px);
+    gap: clamp(3px, 0.3dvw, 8px);
     z-index: 1;
 }
 
@@ -217,7 +216,7 @@ body {
     background-color: var(--light-blue);
     color: var(--black);
     transition: background-color 0.1s ease-in-out;
-    min-width: 175px;
+    min-width: clamp(70px, 10dvw, 250px);
     z-index: 1;
 }
 
@@ -244,7 +243,7 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    font-size: 2dvw;
+    font-size: clamp(20px, 2dvw, 60px);
     font-weight: 500;
     z-index: 1;
 }
