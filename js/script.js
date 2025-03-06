@@ -21,7 +21,7 @@ arrowDown.addEventListener("click", function () {
 const arrowControls = document.getElementById("up-down-container");
 
 function toggleArrowControls() {
-    if (window.innerWidth < 800) {
+    if (window.visualViewport.width < 800) {
         arrowControls.style.display = "none";
     } else {
         arrowControls.style.display = "flex";
